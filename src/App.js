@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
 import Aboutus from "./components/AboutUS/Aboutus";
+import Service from "./components/Service/Service";
 import Services from "./components/Services/Services";
 import "./App.css";
 import Experience from "./components/Experience/Experience";
@@ -26,9 +27,11 @@ function App() {
       <Navbar />
       <Intro />
       <Aboutus/>
-      <Services />
-      <Experience />
+      <Service/>
+      {/* <Services />
+      <Experience /> */}
       <Works />
+      <Services/>
       <Portfolio />
       <Testimonial />
       <Contact />
