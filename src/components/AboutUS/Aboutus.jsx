@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Aboutus.css";
 import greenenenergy from "../../img/greenenergyphoto.jpeg";
 import { themeContext } from "../../Context";
-import {Link} from 'react-scroll'
+import {Link} from 'react-scroll';
 
 const Aboutus = () => {
      // context
@@ -10,7 +10,7 @@ const Aboutus = () => {
   const darkMode = theme.state.darkMode;
 
   return (
-  <div class="container">
+  <div class="container fluid">
       <div class="row">
           <div class="col">
               {/* dark Mode */}

@@ -59,25 +59,25 @@ const Intro = () => {
         /> */}
    
           <Carrousel/>
-        <motion.div
+        {/* <motion.div
           initial={{ top: "-4%", left: "74%" }}
           whileInView={{ left: "68%" }}
           transition={transition}
           className="floating-div"
         >
           <FloatinDiv img={crown} text1="Best in" text2="Cleaner Energy" />
-        </motion.div>
+        </motion.div> */}
 
         {/* animation */}
-        <motion.div
+        {/* <motion.div
           initial={{ left: "9rem", top: "12rem" }}
           whileInView={{ left: "0rem" }}
           transition={transition}
           className="floating-div"
-        >
+        > */}
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Best Client" text2="Service" />
-        </motion.div>
+          {/* <FloatinDiv img={thumbup} text1="Best Client" text2="Service" />
+        </motion.div> */}
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
         <div
