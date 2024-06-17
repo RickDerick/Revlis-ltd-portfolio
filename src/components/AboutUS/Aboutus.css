@@ -4,6 +4,17 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: 0 3rem 0 3rem;
+    height: 15rem;
+    margin-bottom: 13rem;
+    margin-top: 5rem;
+    /* scroll view */
+  }
+  .right-side{
+    height: 15rem;
+    margin-bottom: 13rem;
+    margin-top: 5rem;
+    /* scroll view */
   }
   
   .about-us > :nth-child(1) {
@@ -12,7 +23,7 @@
     font-weight: bold;
   }
   .about-us > :nth-child(2) {
-    color: var(--orange);
+    color: var(--green);
     font-size: 2.5rem;
     font-weight: bold;
   }
@@ -23,6 +34,11 @@
   }
   .s-button {
     width: 8rem;
+    height: 2rem;
+    margin-top: 2rem;
+  }
+
+  .f-icons{
     height: 2rem;
     margin-top: 2rem;
   }

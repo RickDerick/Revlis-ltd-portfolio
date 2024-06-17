@@ -1,10 +1,17 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import ExampleCarouselImage from '../ExampleCarouselImage';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 const Carrousel= () => {
   return (
-    <Carousel>
+    <Container fluid>
+      <Row>
+        <Col>
+        <Carousel>
       <Carousel.Item>
         <ExampleCarouselImage text="First slide" />
         {/* <Carousel.Caption>
@@ -29,6 +36,10 @@ const Carrousel= () => {
         </Carousel.Caption> */}
       </Carousel.Item>
     </Carousel>
+        </Col>
+      </Row>
+    </Container>
+   
   );
 }
 
