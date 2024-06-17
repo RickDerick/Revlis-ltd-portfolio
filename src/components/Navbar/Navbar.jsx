@@ -20,18 +20,13 @@ const navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="services" spy={true} smooth={true}>
+              <Link to="service" spy={true} smooth={true}>
                 Services
               </Link>
             </li>
             <li>
-              <Link to="works" spy={true} smooth={true}>
+              <Link to="about-us" spy={true} smooth={true}>
                 About us
-              </Link>
-            </li>
-            <li>
-              <Link to="portfolio" spy={true} smooth={true}>
-                Portfolio
               </Link>
             </li>
             <li>

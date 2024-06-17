@@ -13,7 +13,7 @@ const Aboutus = () => {
   const darkMode = theme.state.darkMode;
 
   return (
-  <div class="container fluid">
+  <div class="container fluid" id="about-us">
       <div class="row">
           <div class="col">
               {/* dark Mode */}
@@ -28,9 +28,9 @@ const Aboutus = () => {
                     </Link>
 
                  <div className="f-icons">
-                  <Insta color="#242D49" size={"3rem"} />
-                  <Facebook color="#242D49" size={"3rem"} />
-                  <Gitub color="#242D49" size={"3rem"} />
+                  <Insta style={{ color: darkMode ? "white" : "#242D49" }} size={"3rem"} />
+                  <Facebook style={{ color: darkMode ? "white" : "#242D49" }} size={"3rem"} />
+                  <Gitub style={{ color: darkMode ? "white" : "#242D49" }} size={"3rem"} />
                 </div>
                 <p style={{ marginTop: "25px" }}>connect with us on social media</p>
               </div>
