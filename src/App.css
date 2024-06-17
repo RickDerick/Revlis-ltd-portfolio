@@ -9,17 +9,21 @@
     --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
     --orangeCard: rgba(252, 166, 31, 0.45);
     --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+    --green: #00E676;
+    --lightgreenShade:#E8F5E9;
+    --white:#ffffff;
 }
 
 .App{
-    padding: 0.5rem 3.5rem;
+    /* padding: 0.5rem 3.5rem; */
     overflow: hidden;
-    color: var(--black);    
-}
+    color: var(--black); 
+    background: var(--lightgreenShade);   
+} 
 
 .button {
-    background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
-    box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+    background: var(--green);
+    box-shadow: 0px 20px 24px 3px rgba(162, 228, 184, 0.42);
     border-radius: 34px;
     border: none;
     color: white;
@@ -30,8 +34,8 @@
   .button:hover {
     background: white;
     cursor: pointer;
-    border: 1px solid var(--orange);
-    color: var(--orange);
+    border: 1px solid var(--lightgreenShade);
+    color: var(--lightgreenShade);
   }
   @media screen and (max-width: 480px) {
     .App {

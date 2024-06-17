@@ -1,22 +1,9 @@
 import React, { useContext } from "react";
 import "./Intro.css";
-// import Vector1 from "../../img/Vector1.png";
-// import Vector2 from "../../img/Vector2.png";
-// import boy from "../../img/boy.png";
-// import glassesimoji from "../../img/glassesimoji.png";
-import thumbup from "../../img/thumbup.png";
-import crown from "../../img/crown.png";
-import FloatinDiv from "../FloatingDiv/FloatingDiv";
-// import Github from "../../img/github.png";
-// import LinkedIn from "../../img/linkedin.png";
-// import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
-import { motion } from "framer-motion";
-import { Link } from "react-scroll";
-import  Carrousel from "../Carousel/Carrousel";
+import renewableEnergy from "../../img/renewable-energy.mp4";
+
 const Intro = () => {
-  // Transition
-  const transition = { duration: 2, type: "spring" };
 
   // context
   const theme = useContext(themeContext);
@@ -24,72 +11,19 @@ const Intro = () => {
 
   return (
     <div className="Intro" id="Intro">
-      {/* left name side */}
-      <div className="i-left">
-        <div className="i-name">
-          {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? "white" : "" }}>Welcome To RevLis Ltd</span>
-          <span>Productivity, Creativity, Eco-friendliness</span>
-          <span>
-          At Revlis Limited, we are committed to the power of community wealth-building initiatives. Our goal is to expand and enhance our influence by involving and assisting a diverse array of stakeholders. By focusing on renewable energy and water engineering, we aim to foster sustainable development. By collaborating, we can create a brighter future where communities flourish, resources are used responsibly, and everyone has access to the essentials for a fulfilling life.
-          </span>
-        </div>
-        <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">About Us</button>
-        </Link>
-        {/* social icons */}
-        {/* <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
-        </div> */}
-      </div>
-      {/* right image side */}
-      <div className="i-right">
-        {/* <img src={Vector1} alt="" />
-        <img src={Vector2} alt="" />
-        <img src={boy} alt="" /> */}
-        {/* animation */}
-        {/* <motion.img
-          initial={{ left: "-36%" }}
-          whileInView={{ left: "-24%" }}
-          transition={transition}
-          src={glassesimoji}
-          alt=""
-        /> */}
-   
-          <Carrousel/>
-        {/* <motion.div
-          initial={{ top: "-4%", left: "74%" }}
-          whileInView={{ left: "68%" }}
-          transition={transition}
-          className="floating-div"
-        >
-          <FloatinDiv img={crown} text1="Best in" text2="Cleaner Energy" />
-        </motion.div> */}
-
-        {/* animation */}
-        {/* <motion.div
-          initial={{ left: "9rem", top: "12rem" }}
-          whileInView={{ left: "0rem" }}
-          transition={transition}
-          className="floating-div"
-        > */}
-          {/* floatinDiv mein change hy dark mode ka */}
-          {/* <FloatinDiv img={thumbup} text1="Best Client" text2="Service" />
-        </motion.div> */}
-
-        <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
-        <div
-          className="blur"
-          style={{
-            background: "#C1F5FF",
-            top: "17rem",
-            width: "21rem",
-            height: "11rem",
-            left: "-9rem",
-          }}
-        ></div>
+      <video autoPlay loop muted className="background-video" style={{color: darkMode?'var(--white)':''}}>
+        <source src={renewableEnergy} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      {/* <video autoPlay loop muted className="background-video">
+        <source src={renewableEnergy} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> */}
+      <div className="overlay"></div>
+      <div className="content" style={{color: darkMode?'var(--white)':''}}>
+        <h1>Welcome to Revlis Ltd</h1>
+        <p>We're thrilled to have you here!.</p>
+        {/* <button>Learn More</button> */}
       </div>
     </div>
   );

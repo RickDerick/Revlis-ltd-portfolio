@@ -2,11 +2,11 @@ import Navbar from "./components/Navbar/Navbar";
 import Intro from "./components/Intro/Intro";
 import Aboutus from "./components/AboutUS/Aboutus";
 import Service from "./components/Service/Service";
-import Services from "./components/Services/Services";
+// import Services from "./components/Services/Services";
 import "./App.css";
-import Experience from "./components/Experience/Experience";
+// import Experience from "./components/Experience/Experience";
 import Works from "./components/Works/Works";
-import Portfolio from "./components/Portfolio/Portfolio";
+// import Portfolio from "./components/Portfolio/Portfolio";
 import Testimonial from "./components/Testimonials/Testimonial";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -31,8 +31,7 @@ function App() {
       {/* <Services />
       <Experience /> */}
       <Works />
-      <Services/>
-      <Portfolio />
+      {/* <Portfolio /> */}
       <Testimonial />
       <Contact />
       <Footer />
