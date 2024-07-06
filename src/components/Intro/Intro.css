@@ -4,6 +4,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  
 }
 
 .background-video {
@@ -46,10 +47,22 @@
 
 @media screen and (max-width: 480px) {
   .Intro {
-    flex-direction: column;
-    gap: 7rem;
-    height: 64rem;
-
+    height: auto;
   }
 
+  .background-video {
+    height: auto;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .content h1 {
+    font-size: 1rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
 }
