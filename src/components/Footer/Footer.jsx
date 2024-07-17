@@ -1,23 +1,25 @@
-import React from "react";
-import "./Footer.css";
-import Wave from "../../img/wave.png";
-import Insta from "@iconscout/react-unicons/icons/uil-instagram";
-import Facebook from "@iconscout/react-unicons/icons/uil-facebook";
-import Gitub from "@iconscout/react-unicons/icons/uil-github";
+import React from 'react';
+import CardFooter from 'react-bootstrap/CardFooter';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className="footer">
-      <img src={Wave} alt="" style={{ width: "100%", color: "#242D49" }} />
-      <div className="f-content">
-        <span>sylivester@gmail.com</span>
-        <div className="f-icons">
-          <Insta color="white" size={"3rem"} />
-          <Facebook color="white" size={"3rem"} />
-          <Gitub color="white" size={"3rem"} />
-        </div>
-      </div>
-    </div>
+    <CardFooter className="bg-dark text-white">
+      <Container>
+        <Row className="justify-content-center">
+          <Col xs={12} md={6}>
+            <p className="text-center">&copy; {currentYear} Revlis Limited</p>
+          </Col>
+          <Col xs={12} md={6} className="text-center text-md-end mt-3 mt-md-0">
+            <a href="/" className="text-decoration-none text-white">Home</a> |{' '}
+            <a href="#about-us" className="text-decoration-none text-white">About</a> |{' '}
+            <a href="#contact" className="text-decoration-none text-white">Contact</a>
+          </Col>
+        </Row>
+      </Container>
+    </CardFooter>
   );
 };
 

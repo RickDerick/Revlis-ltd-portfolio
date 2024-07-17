@@ -1,0 +1,7 @@
+.custom-navbar {
+  background-color: #00E676 !important;
+}
+
+.navbar-nav .nav-link {
+  color: white !important; /* Optional: Ensure the links are visible on the green background */
+}

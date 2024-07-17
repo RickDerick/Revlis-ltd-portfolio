@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar/Navbar";
+import NavbarComponent from "./components/Navbar/NavbarComponent";
 import Intro from "./components/Intro/Intro";
 import Aboutus from "./components/AboutUS/Aboutus";
 import Service from "./components/Service/Service";
@@ -24,7 +24,7 @@ function App() {
         color: darkMode ? "white" : "",
       }}
     >
-      <Navbar />
+      <NavbarComponent />
       <Intro />
       <Aboutus/>
       <Service/>
