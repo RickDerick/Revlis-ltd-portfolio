@@ -21,7 +21,7 @@ const Intro = () => {
       </video> */}
       <div className="overlay"></div>
       <div className="content" style={{color: darkMode?'var(--white)':''}}>
-        <h1>Welcome to Revlis Ltd</h1>
+        <h4>Welcome to Revlis Engineering Ltd</h4>
         <p>We're thrilled to have you here!.</p>
         {/* <button>Learn More</button> */}
       </div>

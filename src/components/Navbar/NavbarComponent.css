@@ -1,7 +1,72 @@
+/* NavbarComponent.css */
+
 .custom-navbar {
   background-color: #00E676 !important;
+  z-index: 1030;
 }
 
-.navbar-nav .nav-link {
-  color: white !important; /* Optional: Ensure the links are visible on the green background */
+/* Brand styles */
+.brand-text {
+  display: flex;
+  align-items: center;
+  color: white !important;
+}
+
+.brand-text img {
+  margin-right: 0.5rem; /* Adjust spacing between logo and text */
+}
+
+/* Display the brand text on small screens */
+@media (max-width: 768px) {
+  .brand-text .full-text {
+    display: none; /* Hide the longer brand text on small screens */
+  }
+
+  .brand-text .short-text {
+    display: inline; /* Display shorter text on small screens */
+  }
+
+  .navbar-toggler {
+    border-color: white !important; /* Change menu icon border color to white */
+  }
+
+  .navbar-toggler-icon {
+    background-image: none; /* Remove default icon background */
+    background-color: white; /* Set background color to white */
+  }
+
+  .offcanvas-header, .offcanvas-title {
+    color: white !important; /* Ensure "Menu" text is white */
+  }
+
+  .btn-close {
+    filter: invert(1); /* Make the close icon white */
+  }
+  
+}
+
+/* Style for Offcanvas component */
+.offcanvas {
+  background-color: #00E676 !important; /* Green background for Offcanvas */
+}
+
+.offcanvas .nav-link {
+  color: white !important; /* Ensure the links are visible on the green background */
+}
+
+/* Wrapper for social icons to align them to the right */
+.social-icons-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width:768px) {
+  .social-icons-wrapper {
+    justify-content: flex-start; /* Align icons to the start (left) */
+    margin-top: 10px; /* Add spacing if needed */
+  }
+  
+  .social-icons-wrapper > :nth-child(1) {
+    flex-direction: row; /* Ensure icons are displayed in a row */
+    gap:10px;
+  }
 }
