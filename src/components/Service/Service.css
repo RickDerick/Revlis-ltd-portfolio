@@ -1,69 +1,50 @@
 .service {
-  padding: 0 3rem 0 3rem;
-  height: 30rem;
-  margin-bottom: 18rem;
-  margin-top: 5rem;
+  padding: 0 3rem;
+  height: auto; /* Adjust height for responsiveness */
+  margin-bottom: 10rem;
+  margin-top: 3rem;
   padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+.serviceCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards horizontally */
+  gap: 10px;
 }
 
 .serviceCard {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  flex: 1 1 300px; /* Default size, can grow or shrink */
+  max-width: 300px; /* Set max width to prevent overflow */
 }
 
-.one {
-  flex: 1 1 auto;
-}
+/* Responsive design for medium screens and up */
+@media (min-width: 768px) {
+  .serviceCardsContainer {
+    flex-direction: row; /* Arrange cards in a row */
+  }
 
-.two {
-  flex: 1 1 auto;
-}
-
-.three {
-  flex: 1 1 auto;
-}
-
-.awesome {
-  margin-bottom: 3rem;
-  align-items: center;
-}
-
-.awesome > :nth-child(1) {
-  color: var(--black);
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.awesome > :nth-child(2) {
-  color: var(--green);
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.awesome > :nth-child(3) {
-  color: var(--gray);
-  font-size: 14px;
-  margin-top: 1rem;
+  .serviceCard {
+    flex: 1; /* Each card takes equal space */
+    max-width: none; /* Remove max-width restriction */
+    margin: 0 10px; /* Optional: add margin between cards */
+  }
 }
 
 /* Responsive design for screens with max-width 480px */
 @media screen and (max-width: 480px) {
-  .service {
-    padding: 0 1rem;
-    height: auto;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    padding-top: 1rem;
+  .serviceCardsContainer {
+    flex-direction: column;
+    align-items: center; /* Center cards vertically */
   }
 
   .serviceCard {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .one, .two, .three {
-    flex: 1 1 100%;
+    margin-bottom: 2rem; /* Add margin between cards */
+    width: 100%; /* Make cards full-width on small screens */
+    max-width: none; /* Remove max-width restriction */
   }
 
   .awesome {

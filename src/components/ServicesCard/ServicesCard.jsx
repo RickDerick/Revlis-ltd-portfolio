@@ -11,7 +11,6 @@ function ServicesCard({title, text, photo}) {
         <Card.Text>
           {text}
         </Card.Text>
-        {/* <Button variant="primary">Read More</Button> */}
       </Card.Body>
     </Card>
   );

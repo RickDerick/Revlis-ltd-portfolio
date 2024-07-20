@@ -1,51 +1,37 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Aboutus.css";
 import greenenenergy from "../../img/greenenergyphoto.jpeg";
-import { themeContext } from "../../Context";
-import {Link} from 'react-scroll';
-import Insta from "@iconscout/react-unicons/icons/uil-instagram";
-import Facebook from "@iconscout/react-unicons/icons/uil-facebook";
-import Gitub from "@iconscout/react-unicons/icons/uil-github";
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image';
 
 const Aboutus = () => {
-     // context
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
-
   return (
-  <div class="container fluid" id="about-us">
-      <div class="row">
-          <div class="col">
-              {/* dark Mode */}
-              <div class="about-us">
-                <span style={{ color: darkMode ? "white" : "" }}>
-                    Get To Know
-                    </span>
-                   <span>Us</span>
-                <span class="text-start">we are dedicated to sustainable development and recognize the vast potential of renewable energy in advancing Africa's progress toward a brighter future. Our specialized column on renewable energy aims to highlight the transformative impact of clean and sustainable energy solutions across the continent. We cover a wide range of renewable resources, including solar, wind, hydroelectric, and geothermal energy, and their crucial role in addressing energy challenges while combating climate change. Our column features the latest innovations, projects, and success stories, demonstrating how renewable energy can empower communities, drive economic growth, and enhance quality of life</span>
-                   <Link to="contact" smooth={true} spy={true}>
-                     <button className="button s-button">Read More</button>
-                    </Link>
-
-                 <div className="f-icons">
-                  <Insta style={{ color: darkMode ? "white" : "#242D49" }} size={"3rem"} />
-                  <Facebook style={{ color: darkMode ? "white" : "#242D49" }} size={"3rem"} />
-                  <Gitub style={{ color: darkMode ? "white" : "#242D49" }} size={"3rem"} />
-                </div>
-                <p style={{ marginTop: "25px" }}>connect with us on social media</p>
-              </div>
-           </div>
-          <div class="col">
-               {/* right side */}
-               <div className="right-side">
-                <img src={greenenenergy} class="img-fluid" alt="greenEngergy missing"/>
-
-               </div>
-         
-           </div>
-        </div>
+    <div className="AboutUs" id="about-us">
+      <div className="one">
+        <Card className="flex-fill">
+          <Card.Body>
+            <Card.Title>
+              <span className="title-part1">Get to Know</span>
+              <span className="title-part2"> About Us</span>
+            </Card.Title>
+            <Card.Text>
+            <p className="short-text">
+                We are dedicated to sustainable development and recognize the vast potential of renewable energy in advancing Africa's progress toward a brighter future. Our specialized column on renewable energy aims to highlight the transformative impact of clean and sustainable energy solutions across the continent.
+              </p>
+              <p className="full-text">
+                We are dedicated to sustainable development and recognize the vast potential of renewable energy in advancing Africa's progress toward a brighter future. Our specialized column on renewable energy aims to highlight the transformative impact of clean and sustainable energy solutions across the continent. We cover a wide range of renewable resources, including solar, wind, hydroelectric, and geothermal energy, and their crucial role in addressing energy challenges while combating climate change. Our column features the latest innovations, projects, and success stories, demonstrating how renewable energy can empower communities, drive economic growth, and enhance quality of life.
+              </p>
+            </Card.Text>
+            <Button variant="primary" className="green-button">Read More</Button>
+          </Card.Body>
+        </Card>
       </div>
+      <div className="image">
+        <Image src={greenenenergy} fluid alt="greenEngergy missing" />
+      </div>
+    </div>
   );
-}
+};
 
-export default Aboutus
+export default Aboutus;
